@@ -21,9 +21,39 @@ Regarding AI usage this week. I only used Gemini when seeing what my output woul
 
 **This is what Gemini gave me this week:**
 - When I put poor financial information into the prompt, it said this:
-![Poor Finances](/images/bad-finances-prompt.png "Poor Finances")
+![Poor Finances](images/bad-finances-prompt.png "Poor Finances")
 
 - When I put good financial information into the prompt, it said this:
-![Good Finances](/images/good-finances-prompt.png "Good Finances")
+![Good Finances](images/good-finances-prompt.png "Good Finances")
 
 I think that this response is pretty good, as it is concise, isn't hallucinating information, and analyses the situation. Although I may change it in the future anyways.
+
+<br>
+
+---
+
+<br>
+
+## Entry 1: 28 September - 04 October
+This week I actually started working on my code. I used the pseudocode I had made last week as a guide as to what I wanted to build, and because of that, it was very easy to get started.
+
+Since Gradio is an actual display with pre-defined components, and isn't the normal terminal that I am used to, my pseudocode wasn't a 1 to 1 match, but it gave me what I needed to know.
+To get started, I looked up Gradio documentation, as I didn't want to rely on AI immediately. Initially I used the [quickstart guide](https://gradio.app/guides/quickstart), however when I tried to make the program more complex, I didn't know what to do and how to use Gradio to achieve what I wanted. Still reluctant to run to AI, I came across this this website which showed how to put together more [complex components](https://gradio.app/guides/dynamic-apps-with-render-decorator#putting-it-together). When play-testing on the website, I could see that this is the exact functionality I wanted, however I didn't understand any of the code and how to make it mine. This is where I then went to Gemini.
+
+I pasted the code into Gemini and asked it to explain each line of the code and how it worked.
+![Gemini explaining each line of code](images/AI-explaining-code-1.png "Gemini explaining each line of code")
+This allowed me to actually see how the program functions and how I can use it.
+
+However, since I'm new to Gradio, I still didn't understand much about the code. So I would ask Gemini for further clarification on how things worked
+![Gemini providing further clarification](images/AI-explaining-code-2.png "Gemini providing further clarification")
+
+And when I begun to get the handle on things, I gave it my own explanation of how the code works, to see if I truly do understand it.
+![Gemini explaining each line of code](images/AI-explaining-code-3.png "Gemini explaining each line of code")
+This provided reinforced learning and allowed me to be fully confident that I can work through the program.
+
+I didn't ask it to write any of the code for me as I didn't need to. Once it explained to me how the code worked, I was able to make my own code. After finishing it, I then verified with it that everything was working. I asked it to go through my code and give me a summary of what I did well, and what I need to improve on.
+An example of something it told me to improve on, was it telling me to add a guard at the start of the code.
+![Gemini explaining each line of code](images/AI-explaining-code-4.png "Gemini explaining each line of code")
+Despite it being probably being correct, I haven't experienced any issues with my current setup, so I have no reason to change it to what it's telling me. I also purposefully made the object null so that it would render an empty space. However, if in the future I hate the design I made, I may add the guard to have it display a message.
+
+All in all, Gemini has been very helpful this week in explaining the code, and has fully enabled me to write my own code rather than rely on it for everything.
