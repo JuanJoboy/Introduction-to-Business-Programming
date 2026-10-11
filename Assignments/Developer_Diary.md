@@ -34,7 +34,7 @@ I think that this response is pretty good, as it is concise, isn't hallucinating
 
 <br>
 
-## Entry 1: 28 September - 04 October
+## Entry 2: 28 September - 04 October
 This week I actually started working on my code. I used the pseudocode I had made last week as a guide as to what I wanted to build, and because of that, it was very easy to get started.
 
 Since Gradio is an actual display with pre-defined components, and isn't the normal terminal that I am used to, my pseudocode wasn't a 1 to 1 match, but it gave me what I needed to know.
@@ -57,3 +57,43 @@ An example of something it told me to improve on, was it telling me to add a gua
 Despite it being probably being correct, I haven't experienced any issues with my current setup, so I have no reason to change it to what it's telling me. I also purposefully made the object null so that it would render an empty space. However, if in the future I hate the design I made, I may add the guard to have it display a message.
 
 All in all, Gemini has been very helpful this week in explaining the code, and has fully enabled me to write my own code rather than rely on it for everything.
+
+<br>
+
+---
+
+<br>
+
+## Entry 3: 11 October
+This week didn't have much work to be done, but I still got through a major chunk of the assignment.
+The last thing I completed were the initial components for the Gradio interface, but I stopped there as I couldn't figure out how to properly read the user's data and do calculations on it. Since the user can just edit their data, I thought "how will the calculations know to take in the correct data?"
+
+But then it hit me today that I should just make a button so that the user can click it and submit all the finalised information they have uploaded.
+I don't know why it took me this long to figure that out but that is what I did this week.
+I created a button that when clicked, submits all of the user's data, and calculates financial data using 3 functions:
+- calculate_income()
+- calculate_personal_finances()
+- calculate_item_impact()
+
+This data is then put into a User_Data() object and is used for the financial summary and impact analysis display.
+
+A key thing about the calculation section is that I force the user to input an item that they want to purchase, as the point of the program is to determine if this purchase is feasible. However, I don't force the user to put in any expenses or have any money in their account. I gracefully handle those by putting in default values for the bank account information, and just let the expenses be an empty array. When first conceiving this section, I also made the payslips array optional too, however I soon changed this as the program is designed for people who work shift based jobs. And allowing a user to have no income, no money, and no expenses didn't seem right. I also enforced a minimum of 0.1 for the number of hours worked and the hourly rate because otherwise the user could just put 0, which essentially makes the payslip section optional again.
+
+Overall, it was very easy to implement these sections once I figured out what to do. This was mainly due to me being able to essentially copy and paste my pseudocode and translate it into Python.
+
+Regarding my AI usage, due to the simplicity of the functionalities I completed, I didn't need to use much AI.
+I only used it twice, once when showing it my code and asking it what it thought, and a second time when asking it about error handling for my code.
+
+I submitted all of my initial code and plans for the calculation and display functions, and it outputted the following code back to me as an **improved and streamlined** version of my code.
+
+![Gemini `improving` my code](images/analyse-purchase.png "Gemini `improving` my code")
+When I read through this, I immediately found it incomprehensible and difficult to read, and I didn't understand how it was streamlined. It essentially does the same thing of doing calculations and displaying the data once a button is pressed. Just in a messier and less modular way. Due to that, I didn't bother with trying to integrate anything it gave me as I didn't need to. My code worked perfectly fine according to what I wanted, and I was able to read it well.
+
+The next time I used AI was to figure out how to get warning messages to properly display when the button is clicked.
+![Gemini explaining each line of code](images/error-1.png "Gemini explaining each line of code")
+The initial explanation helped a bit, but reading the code allowed me to actually understand what was happening.
+
+In the code, I could see that the gr.Error() component was being raised if something bad happened. I had been putting the error component within the exception block and was confused as to how to throw exceptions on demand. So this AI output was actually quite helpful. It also suggested I raise an error for all 4 inputs, however I rejected that due to my aforementioned reasoning of allowing the user to have no money and expenses.
+![Gemini explaining each line of code](images/error-2.png "Gemini explaining each line of code")
+
+All in all, today was very productive, and I intend to continue this momentum by finishing off the AI Assistant display and writing the test cases.
